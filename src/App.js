@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Mobile from './components/mobile/mobile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <section className="App">
+      <div className="back-gradient"></div>
+      <div className="mobile-view">
+        <Mobile/>
+      </div>
+      <div className="welcome-banner">
+        <h1>Simple booking</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Stay in touch with our dog walkers through the chat interface.This makes it easy to discuss arrangements and make bookings.Once the walk has been completed you can rate your walker and book again all through the chat. 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </div>  
+    </section>
   );
 }
 

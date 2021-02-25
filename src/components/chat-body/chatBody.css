@@ -1,0 +1,128 @@
+.chat-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto) 30px;
+  padding: 0.5rem;
+  gap: 5px;
+}
+
+.message {
+  padding: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.2rem;
+  width: 60%;
+  font-size: 9px;
+  color: var(--moderate-violet);
+  line-height: 1.5;
+  height: fit-content;
+  background-color: hsl(276, 100%, 95%);
+}
+
+.message-4,
+.message-5,
+.message-3 {
+  justify-self: end;
+  border-radius: 0.5rem 0.5rem 0.2rem 0.5rem;
+  color: var(--dark-violet);
+  background: var(--white);
+}
+
+.message-3 {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.message-3 span {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+.span-1 {
+  background: url(./../../assets/images/dog-image-1.jpg);
+  background-size: cover;
+}
+.span-2 {
+  background: url(./../../assets/images/dog-image-2.jpg);
+  background-size: cover;
+}
+.span-3 {
+  background: url(./../../assets/images/dog-image-3.jpg);
+  background-size: cover;
+}
+
+.message-4 {
+  width: 48%;
+}
+
+.message-5 {
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+.type-area {
+  border-radius: 1rem;
+  background-color: var(--white);
+  padding-left: 0.5rem;
+  color: var(--grayish-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  place-self: stretch;
+}
+
+.type-area input[type='text'] {
+  border: none;
+  font-family: 'Rubik', sans-serif;
+  color: var(--grayish-blue);
+  font-size: 10px;
+}
+
+.type-area i {
+  font-size: 20px;
+  margin: 5px;
+  color: var(--button-background);
+  background-color: var(--white);
+  border-radius: 50%;
+}
+.message-7 {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  padding-right: 10px;
+  background: linear-gradient(
+    to right,
+    var(--light-magenta),
+    var(--light-voilet)
+  );
+}
+
+.message-7-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.message-7-spin {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--button-outline);
+}
+
+.message-7-text span:nth-child(2) {
+  font-size: 11px;
+  color: var(--sub-heading-color);
+}
+
+.message-7 span {
+  color: var(--white);
+  font-size: 0.9rem;
+  margin-right: 5px;
+  font-weight: 500;
+}

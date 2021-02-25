@@ -1,38 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  /*colors*/
+  --white: hsl(0, 0%, 100%);
+  --app-background: hsl(270, 20%, 96%);
+  --button-background: hsl(271, 36%, 24%);
+  --button-outline: hsl(289, 100%, 72%);
+  --main-heading: hsl(271, 36%, 24%);
+  --sub-heading-color: hsl(276, 100%, 81%);
+  --moderate-violet: hsl(276, 55%, 52%);
+  --dark-violet: hsl(271, 15%, 43%);
+  --grayish-blue: hsl(206, 6%, 79%);
+  --grayish-violet: hsl(270, 7%, 64%);
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-voilet: hsl(264, 100%, 61%);
+}
+
 .App {
+  background-color: var(--app-background);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 75% 25%;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  position: relative;
+}
+
+.back-gradient {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(var(--light-magenta), var(--light-voilet));
+  border-radius: 0 0 60% 40%;
+}
+
+.mobile-view {
+  justify-self: center;
+  align-self: center;
+  z-index: 1;
+}
+
+.welcome-banner {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome-banner > h1 {
+  color: var(--main-heading);
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.welcome-banner > p {
+  color: var(--grayish-violet);
+  font-size: 1em;
+  line-height: 1.35;
+}
+
+@media screen and (min-width: 601px) {
+  .App {
+    grid-template-columns: 50% 30% 20%;
+    grid-template-rows: 100%;
+    gap: 7rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .welcome-banner {
+    justify-self: flex-start;
+    align-self: center;
+    text-align: left;
+    grid-column: 2;
+    grid-row: 1;
   }
-  to {
-    transform: rotate(360deg);
+  .welcome-banner p {
+    line-height: 1.5;
+  }
+
+  .mobile-view {
+    justify-self: flex-end;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .back-gradient {
+    left: -8%;
+    width: 45%;
+    height: 90%;
+    border-radius: 0 0 50% 50%;
   }
 }

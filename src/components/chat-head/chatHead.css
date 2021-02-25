@@ -1,0 +1,71 @@
+.chat-head {
+  background-image: linear-gradient(
+    to right,
+    var(--light-voilet),
+    var(--light-magenta)
+  );
+  border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 40% 60%;
+  padding: 0 0.7rem 0.5rem 0.7rem;
+}
+
+.chat-head-top {
+  grid-column: 1/3;
+  grid-row: 1;
+  background-color: var(--white);
+  width: 60%;
+  border-radius: 3rem;
+  justify-self: center;
+  transform: translateY(-8px);
+}
+
+.chat-head-left {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+}
+
+.chat-head-right {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.head-left-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-heading-name {
+  color: var(--white);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.left-heading-status {
+  font-size: 8px;
+  color: var(--sub-heading-color);
+}
+.head-left-pic {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: url(./../../assets/images/avatar.jpg);
+  background-size: cover;
+}
+
+.chat-head-right {
+  justify-self: center;
+  align-self: center;
+}
+
+.chat-head-right > i,
+.chat-head-left > i {
+  font-size: 10px;
+  color: var(--sub-heading-color);
+}

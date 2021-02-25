@@ -1,0 +1,19 @@
+.mobile {
+  width: 225px;
+  height: 500px;
+  justify-self: center;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 35px grey;
+}
+
+.chat-box {
+  width: 100%;
+  height: 100%;
+  background-color: var(--app-background);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 12% 88%;
+  border-radius: 1.5rem;
+}
